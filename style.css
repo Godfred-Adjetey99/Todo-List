@@ -9,9 +9,29 @@ body {
     display: grid;
     grid-template-columns: 200px 150px 100px;
     gap: 10px;
+    align-items: center;
 }
 
 #inputSection {
     margin-bottom: 20px;
+    align-items: stretch;
+}
+
+#todoInput, #dueDateInput {
+    padding: 10px;
+    font-size: 16px;
+}
+
+#addTodoButton, #deleteBtn {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #317c0e;
+    color: white;
+    border: none;
+    cursor: pointer; 
+}   
+
+#deleteBtn {
+    background-color: #c0392b;
 }
 

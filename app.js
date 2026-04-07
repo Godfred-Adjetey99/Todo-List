@@ -16,7 +16,7 @@ const renderHtml = () => {
     <div>${dueDate}</div>
     <button onClick="todoList.splice(${i}, 1);
     renderHtml();
-    ">Delete</button>
+    " id="deleteBtn">Delete</button>
     `;
     todoHTML += html;
   }
