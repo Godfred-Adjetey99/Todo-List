@@ -12,12 +12,12 @@ const renderHtml = () => {
     const { name, dueDate } = addListObject;
 
     const html = `
-    <p>
-    ${name} - ${dueDate}
-    <button onClick="todoList.splice(${i}, 1)
-    renderHtml()
+    <div>${name} </div>
+    <div>${dueDate}</div>
+    <button onClick="todoList.splice(${i}, 1);
+    renderHtml();
     ">Delete</button>
-    </p>`;
+    `;
     todoHTML += html;
   }
 
