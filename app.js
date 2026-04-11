@@ -7,19 +7,18 @@ const todoList = [{ name: "wash cloths", dueDate: "22-040-26" }];
 const renderHtml = () => {
   let todoHTML = "";
 
-  for (let i = 0; i < todoList.length; i++) {
-    const addListObject = todoList[i];
+  todoList.forEach((addListObject, index) => {
     const { name, dueDate } = addListObject;
 
     const html = `
     <div>${name} </div>
     <div>${dueDate}</div>
-    <button onClick="todoList.splice(${i}, 1);
+    <button onClick="todoList.splice(${index}, 1);
     renderHtml();
     " id="deleteBtn">Delete</button>
     `;
     todoHTML += html;
-  }
+  });
 
   document.querySelector("#todoHTML").innerHTML = todoHTML;
 };
