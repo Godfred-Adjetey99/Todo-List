@@ -13,14 +13,18 @@ const renderHtml = () => {
     const html = `
     <div>${name} </div>
     <div>${dueDate}</div>
-    <button onClick="todoList.splice(${index}, 1);
-    renderHtml();
-    " id="deleteBtn">Delete</button>
+    <button id="deleteBtn">Delete</button>
     `;
     todoHTML += html;
   });
 
   document.querySelector("#todoHTML").innerHTML = todoHTML;
+  document.querySelectorAll("#deleteBtn").forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      todoList.splice(index, 1);
+      renderHtml();
+    });
+  });
 };
 
 renderHtml();
