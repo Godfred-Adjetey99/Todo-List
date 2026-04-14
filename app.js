@@ -25,6 +25,8 @@ const renderHtml = () => {
 
 renderHtml();
 
+addTodoBtn.addEventListener("click", () => addTask());
+
 const addTask = () => {
   const name = todoInput.value;
   const dueDate = dateInput.value;
